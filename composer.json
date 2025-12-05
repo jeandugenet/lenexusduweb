@@ -35,17 +35,18 @@
       "Tests\\": "tests/"
     }
   },
-  
   "scripts": {
-    "post-autoload-dump": [
-      "Illuminate\\\\Foundation\\\\ComposerScripts::postAutoloadDump",
-      "@php artisan package:discover --ansi"
-    ],
-    "post-install-cmd": [
-      "@php artisan optimize"
-    ]
-  },
 
+"post-install-cmd": [
+    "@php artisan optimize:clear",
+    "@php artisan view:cache"
+],
+"post-update-cmd": [
+    "@php artisan optimize:clear",
+    "@php artisan view:cache"
+],
+
+  
   "extra": {
     "laravel": {
       "dont-discover": []
