@@ -7,12 +7,12 @@
       "build": "vite build",
       "watch": "vite build --watch --mode development",
       "serve": "vite preview",
-      "heroku-postbuild": "npm install -g npm@11.6.4 && npm run build"  
+      "heroku-postbuild": "npm install -g npm@11.6.4 && npm run build"    
     },
 
     "engines": {
         "node": "22.x",
-        "npm" : "10.x"
+        "npm" : "11.x"
     },
     
     "devDependencies": {
