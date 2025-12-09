@@ -36,23 +36,24 @@
     }
   },
 
-  "scripts": {
-  "post-autoload-dump": [
-      "Illuminate\\\\Foundation\\\\ComposerScripts::postAutoloadDump",
-      "@php artisan package:discover --ansi"
-  ],
-
-  "post-install-cmd": [
-      "@php artisan optimize:clear",
-      "@php artisan view:cache"
-  ],
-  "post-update-cmd": [
-      "@php artisan optimize:clear",
-      "@php artisan view:cache"
-  ]
-},
-
-
+    "scripts": {
+          "post-install-cmd": [
+              "@php artisan optimize:clear",
+              "@php artisan view:cache"
+          ],
+          "post-update-cmd": [
+              "@php artisan optimize:clear",
+              "@php artisan view:cache"
+          ],
+          "test": [
+              "@php artisan config:clear --ansi",
+              "@php artisan test"
+          ],
+          "post-autoload-dump": [
+              "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+              "@php artisan package:discover --ansi"
+          ]
+  },
   "extra": {
     "laravel": {
       "dont-discover": []

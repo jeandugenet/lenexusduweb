@@ -4,12 +4,12 @@
   "type": "module",
 
   "scripts": {
-    "dev": "vite",
+    "dev": "vite dev",
     "build": "vite build",
     "production": "vite build",
     "watch": "vite build --watch --mode development",
     "serve": "vite preview",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build" 
   },
 
   "engines": {
