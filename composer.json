@@ -39,7 +39,9 @@
     "scripts": {
           "post-install-cmd": [
               "@php artisan optimize:clear",
-              "@php artisan view:cache"
+              "@php artisan view:cache",
+              "npm install",
+              "npm run build"
           ],
           "post-update-cmd": [
               "@php artisan optimize:clear",
@@ -53,7 +55,8 @@
               "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
               "@php artisan package:discover --ansi"
           ]
-  },
+ 
+        },
   "extra": {
     "laravel": {
       "dont-discover": []
