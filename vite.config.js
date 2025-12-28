@@ -8,4 +8,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        // Ajouter cette section pour la production
+        outDir: 'public/build', // Emplacement où les assets compilés seront stockés
+        manifest: true, // Crée un fichier de manifest pour Laravel
+        chunkSizeWarningLimit: 500, // Pour éviter les warnings en cas de gros bundles
+    },
 });
+
