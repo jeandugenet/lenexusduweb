@@ -8,7 +8,6 @@ export default defineConfig({
       refresh: true,
     }),
   ],
-
   build: {
     outDir: 'public/build',
     manifest: true,
@@ -18,6 +17,5 @@ export default defineConfig({
       }
     },
   },
-  
   base: '/', // important
 });
